@@ -1,11 +1,9 @@
-import { useState } from 'react'
+import {useEffect, useState} from 'react'
 
 import './App.css'
 
 function App() {
-
-
-  return (
+return (
     <div className="App">
       useAxios hook
     </div>
