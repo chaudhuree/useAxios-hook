@@ -16,17 +16,19 @@ const useAxios = (configObj) => {
 
     const fetchData = async () => {
       try {
+        setLoading(true);
+        setError("");
         const res = await axiosInstance[method.toLowerCase()](url, {
           ...requestConfig,
           signal: controller.signal,
         });
-        console.log(res);
+        // console.log(res);
         setResponse(res.data);
+        setLoading(false);
       } catch (err) {
+        setLoading(false);
         console.log(err.message);
         setError(err.message);
-      } finally {
-        setLoading(false);
       }
     };
 

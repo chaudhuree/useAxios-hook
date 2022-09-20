@@ -1,13 +1,14 @@
-import {useEffect, useState} from 'react'
-
-import './App.css'
+import Jokes from "./components/Jokes";
 
 function App() {
-return (
-    <div className="App">
-      useAxios hook
-    </div>
-  )
+  return (
+    <main className="App">
+      <h1>useAxios Hooks</h1>
+      <>
+        <Jokes />
+      </>
+    </main>
+  );
 }
 
-export default App
+export default App;
